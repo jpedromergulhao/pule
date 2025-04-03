@@ -85,6 +85,7 @@ function Home() {
             localStorage.setItem("userRegistered", "true");
             navigate("/mapa");
         } else {
+            localStorage.setItem("userRegistered", "false");
             alert("😕 Parece que não encontramos o seu cadastro. Que tal fazer um? 🎉");
         }
     };
@@ -118,6 +119,7 @@ function Home() {
     
             // Atualiza localStorage
             localStorage.setItem("user", JSON.stringify(user));
+            localStorage.setItem("userRegistered", "true");
     
             // Aguarda a atualização do estado antes da navegação
             setTimeout(() => navigate("/mapa"), 100);
