@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../redux/userSlice";
+import { v4 as uuidv4 } from 'uuid';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Home.css";
@@ -35,6 +36,10 @@ const getCroppedImg = async (imageSrc, maxSize = 1024) => {
             reader.onloadend = () => resolve(reader.result);
         }, "image/jpeg", 0.7);
     });
+};
+
+const generateNumericId = () => {
+    return parseInt(uuidv4().replace(/\D/g, "").slice(0, 8), 10);
 };
 
 const createImage = (url) => new Promise((resolve, reject) => {
@@ -97,14 +102,14 @@ function Home() {
     };
 
     const handleRegister = () => {
-        if (name && surname && email && croppedImage) {
+        if (name.trim() && surname.trim() && email.trim() && croppedImage) {
             const user = {
-                name,
-                surname,
-                email,
+                name: name.trim(),
+                surname: surname.trim(),
+                email: email.trim(),
                 profilePic: croppedImage,
                 capiba: Math.floor(Math.random() * 201),
-                id: Math.floor(Math.random() * 100001),
+                id: generateNumericId(),
                 availableRewards: []
             };
     
@@ -114,8 +119,8 @@ function Home() {
             // Atualiza localStorage
             localStorage.setItem("user", JSON.stringify(user));
     
-            // Navega para a página do mapa
-            navigate("/mapa");
+            // Aguarda a atualização do estado antes da navegação
+            setTimeout(() => navigate("/mapa"), 100);
         } else {
             alert("Preencha todos os campos antes de continuar.");
         }
