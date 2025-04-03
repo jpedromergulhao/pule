@@ -1,0 +1,132 @@
+.home {
+    background-color: #D1EEF1;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    transform: translateY(15%);
+}
+
+.logo,
+.logins,
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.logo img {
+    height: 200px;
+}
+
+.logo h1 {
+    font-family: "Baloo 2", sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.logo span {
+    color: #777;
+    font-size: 20px;
+    max-width: 250px;
+}
+
+.logins {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btns {
+    width: 100%;
+    padding: 10px;
+    background-color: #67B5BE;
+    border: 2px solid #498D95;
+    border-bottom: 5px solid #498D95;
+    border-radius: 10px;
+    color: #F5F5F5;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.guestBtn {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid #67B5BE;
+    color: #67B5BE;
+    border-radius: 10px;
+}
+
+.texts {
+    width: 100%;
+    padding: 10px;
+    background-color: #F7F7F8;
+    color: #498D95;
+    border: 2px solid #498D95;
+    font-size: 16px;
+}
+
+.register {
+    transform: translateY(20%);
+}
+
+.imageInput {
+    display: none;
+    /* Esconde o input padrão */
+}
+
+.imageInput-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #67B5BE;
+    border: 2px solid #498D95;
+    border-bottom: 5px solid #498D95;
+    border-radius: 10px;
+    color: #F5F5F5;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    text-align: center;
+}
+
+.imageInput-label:hover {
+    background-color: #498D95;
+}
+
+.imageInput-label:active {
+    background-color: #325f64;
+}
+
+.profile-preview {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+}
+
+.crop-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    /* Adiciona um espaçamento entre a área de corte e o botão */
+}
+
+.crop-container {
+    width: 300px;
+    /* Define um tamanho máximo */
+    height: 300px;
+    /* Mantém um tamanho adequado */
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
