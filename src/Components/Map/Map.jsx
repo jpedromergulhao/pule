@@ -6,6 +6,7 @@ import './Map.css';
 
 // Fix for default marker icons
 delete L.Icon.Default.prototype._getIconUrl;
+delete L.Renderer.prototype.options.vml;
 L.Icon.Default.mergeOptions({
     iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
     iconUrl: require('leaflet/dist/images/marker-icon.png'),
@@ -121,6 +122,7 @@ function Map({ destination, onRouteCalculated }) {
                 center={currentPosition}
                 zoom={16}
                 style={{ height: "100%", width: "100%" }}
+                renderer={L.svg()}
             >
                 <MapUpdater center={currentPosition} zoom={16} />
                 <TileLayer
