@@ -22,13 +22,13 @@ Pule! is a prototype gamified app designed to enhance engagement during Recife's
 ## 📷 Screenshots
 
 ### Home Screen
-![Home Screen](./my-app/screenshots/home.png)
+![Home Screen](./screenshots/home.png)
 git 
 ### Map Screen
-![Map Screen](./my-app/screenshots/map.png)
-
+![Map Screen](./screenshots/map.png)
+git a
 ### Rewards Screen
-![Map Screen](./my-app/screenshots/rewards.png)
+![Map Screen](./screenshots/rewards.png)
 
 ## 📲 Installation & Usage
 
