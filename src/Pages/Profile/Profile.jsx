@@ -6,6 +6,12 @@ import "./Profile.css";
 import icon from "../../assets/home-icon.png";
 import defaultPhoto from "../../assets/avatar1.jpg";
 
+const getEmailProvider = (email) => {
+    if (!email) return "Nenhum email";
+    const match = email.match(/@([^.]+)\./);
+    return match ? match[1] : "Desconhecido";
+};
+
 function Profile() {
 
     const user = useSelector((state) => state.user);
@@ -97,7 +103,7 @@ function Profile() {
                     <h1>{userStats.name || "usuário"}</h1>
                     <p>ID: #{userStats.id || "id"}</p>
                     <div className="login-method">
-                        <span className="gov-br-badge">{userStats.email || "email"}</span>
+                        <span className="gov-br-badge">{getEmailProvider(userStats.email)}</span>
                     </div>
                 </div>
             </div>
