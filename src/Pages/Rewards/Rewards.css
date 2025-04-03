@@ -1,0 +1,463 @@
+.rewards-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 80px);
+}
+
+.rewards-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.rewards-header h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.user-coins {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.coin-icon {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.coin-amount {
+    font-weight: bold;
+    color: #78C800;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.back-button {
+    padding: 8px 16px;
+    background-color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category-button {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.category-icon {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.category-button.active {
+    background-color: #78C800;
+    color: white;
+}
+
+/* Cores específicas para cada categoria */
+.category-button.transport.active {
+    background-color: #2196F3;
+}
+
+.category-button.food.active {
+    background-color: #FF9800;
+}
+
+.category-button.entertainment.active {
+    background-color: #9C27B0;
+}
+
+.category-button.shopping.active {
+    background-color: #F44336;
+}
+
+.category-button:hover:not(.active) {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.rewards-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.rewards-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.rewards-description p {
+    font-size: 16px;
+}
+
+.rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.reward-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.3s ease;
+    border-top: 4px solid #78C800;
+}
+
+.reward-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Cores específicas para cada categoria */
+.reward-card.transport {
+    border-top-color: #2196F3;
+}
+
+.reward-card.food {
+    border-top-color: #FF9800;
+}
+
+.reward-card.entertainment {
+    border-top-color: #9C27B0;
+}
+
+.reward-card.shopping {
+    border-top-color: #F44336;
+}
+
+.reward-logo {
+    width: 50px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin: 0 auto 10px;
+}
+
+.reward-logo.large {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.reward-provider {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.reward-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.reward-description {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.reward-expiry {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.reward-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.price-icon {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.price-amount {
+    font-weight: bold;
+    color: #78C800;
+    font-size: 20px;
+}
+
+.redeem-button {
+    padding: 8px 0;
+    background-color: #78C800;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.redeem-button:hover {
+    background-color: #69b300;
+}
+
+.reward-card.transport .price-amount,
+.reward-card.transport .redeem-button {
+    color: #2196F3;
+    background-color: #E3F2FD;
+}
+
+.reward-card.transport .redeem-button:hover {
+    background-color: #2196F3;
+    color: white;
+}
+
+.reward-card.food .price-amount,
+.reward-card.food .redeem-button {
+    color: #FF9800;
+    background-color: #FFF3E0;
+}
+
+.reward-card.food .redeem-button:hover {
+    background-color: #FF9800;
+    color: white;
+}
+
+.reward-card.entertainment .price-amount,
+.reward-card.entertainment .redeem-button {
+    color: #9C27B0;
+    background-color: #F3E5F5;
+}
+
+.reward-card.entertainment .redeem-button:hover {
+    background-color: #9C27B0;
+    color: white;
+}
+
+.reward-card.shopping .price-amount,
+.reward-card.shopping .redeem-button {
+    color: #F44336;
+    background-color: #FFEBEE;
+}
+
+.reward-card.shopping .redeem-button:hover {
+    background-color: #F44336;
+    color: white;
+}
+
+/* Modal */
+.redeem-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redeem-modal {
+    background-color: white;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-content h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.modal-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.reward-detail {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-label {
+    font-weight: 500;
+    color: #666;
+}
+
+.detail-value {
+    color: #333;
+}
+
+.confirmation-message {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.confirmation-message p {
+    color: #333;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.cancel-button,
+.confirm-button {
+    flex: 1;
+    padding: 10px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.cancel-button {
+    background-color: #f0f0f0;
+    color: #666;
+}
+
+.confirm-button {
+    background-color: #78C800;
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: #e0e0e0;
+}
+
+.confirm-button:hover {
+    background-color: #69b300;
+}
+
+.no-rewards {
+    text-align: center;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    width: 100%;
+    grid-column: 1 / -1;
+    color: #666;
+}
+
+@media (max-width: 600px) {
+    .rewards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rewards-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .back-button {
+        align-self: flex-start;
+    }
+
+    .category-filter {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 5px;
+    }
+}
