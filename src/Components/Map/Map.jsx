@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
+import { useSelector } from 'react-redux';
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -24,6 +25,13 @@ function MapUpdater({ center, zoom }) {
 function Map({ destination, onRouteCalculated }) {
     const [currentPosition, setCurrentPosition] = useState(null);
     const [route, setRoute] = useState(null);
+    const reduxPosition = useSelector(state => state.location.currentPosition);
+
+    useEffect(() => {
+        if (reduxPosition) {
+            setCurrentPosition(reduxPosition);
+        }
+    }, [reduxPosition]);
 
     const convertToLeafletCoords = (googleCoords) => {
         if (!googleCoords || !Array.isArray(googleCoords) || googleCoords.length !== 2) {
@@ -69,10 +77,10 @@ function Map({ destination, onRouteCalculated }) {
             const deltaLat = (end[0] - start[0]) * Math.PI / 180;
             const deltaLon = (end[1] - start[1]) * Math.PI / 180;
 
-            const a = Math.sin(deltaLat/2) * Math.sin(deltaLat/2) +
-                    Math.cos(lat1) * Math.cos(lat2) *
-                    Math.sin(deltaLon/2) * Math.sin(deltaLon/2);
-            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            const a = Math.sin(deltaLat / 2) * Math.sin(deltaLat / 2) +
+                Math.cos(lat1) * Math.cos(lat2) *
+                Math.sin(deltaLon / 2) * Math.sin(deltaLon / 2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
             const distance = R * c;
 
             if (onRouteCalculated) {
@@ -93,12 +101,12 @@ function Map({ destination, onRouteCalculated }) {
                 },
                 (error) => {
                     console.error("Erro ao obter localização:", error);
-                    alert("Você caiu na localização onde o hackathon foi realizado. Por favor habilite a localização ou apenas continue com a localização atual.");
-                    setCurrentPosition([-8.054257, -34.886898]); 
+                    alert("📍 Não achamos sua localização. Te colocamos no local do evento! Se quiser usar sua localização real, clica no botão de PIN no menu e ativa as permissões no navegador.");
+                    setCurrentPosition([-8.054257, -34.886898]);
                 }
             );
         } else {
-            alert("Houve algum erro em pegar a sua localização e você caiu na localização onde o hackathon foi realizado. Tente recarregar a página e habilitar a localização ou apenas continue com a localização atual.")
+            alert("📍 Não achamos sua localização. Te colocamos no local do evento! Se quiser usar sua localização real, clica no botão de PIN no menu e ativa as permissões no navegador.");
             setCurrentPosition([-8.054257, -34.886898]);
         }
     }, []);

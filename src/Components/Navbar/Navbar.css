@@ -8,10 +8,18 @@ nav {
     height: fit-content;
     position: sticky;
     bottom: 0;
-    padding: 20px;
+    padding: 20px 5px;
     z-index: 1000;
 }
 
 .icons {
     height: 30px;
+}
+
+.location {
+    border: none;
+}
+
+.location:hover {
+    cursor: pointer;
 }
