@@ -1,11 +1,11 @@
 .daily-missions h2 {
     font-size: 20px;
     margin-bottom: 10px;
-    color: #333;
+    color: #215E63; /* azul petróleo */
 }
 
 .missions-description {
-    color: #666;
+    color: #5E7C80;
     margin-bottom: 20px;
 }
 
@@ -20,9 +20,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     border-radius: 8px;
-    border-left: 4px solid #4CAF50;
+    border-left: 4px solid #00BFA6;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -30,33 +30,29 @@
 
 /* Cores específicas para cada categoria */
 .mission-card.tourism {
-    border-left-color: #FF9800;
-    /* Laranja para turismo */
+    border-left-color: #F4A261; /* tom quente de laranja */
 }
 
 .mission-card.fitness {
-    border-left-color: #2196F3;
-    /* Azul para fitness */
+    border-left-color: #219EBC; /* azul vibrante */
 }
 
 .mission-card.health {
-    border-left-color: #F44336;
-    /* Vermelho para saúde */
+    border-left-color: #E76F51; /* vermelho queimado */
 }
 
 .mission-card.pets {
-    border-left-color: #9C27B0;
-    /* Roxo para pets */
+    border-left-color: #9C89B8; /* roxinho pastel */
 }
 
 .mission-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .mission-card.completed {
-    border-left-color: #9E9E9E;
-    opacity: 0.7;
+    border-left-color: #B0BEC5;
+    opacity: 0.65;
 }
 
 .mission-info {
@@ -71,7 +67,7 @@
 
 .mission-info p {
     font-size: 14px;
-    color: #666;
+    color: #607D8B;
 }
 
 .mission-reward {
@@ -85,45 +81,46 @@
 .reward-amount {
     font-size: 20px;
     font-weight: bold;
-    color: #4CAF50;
+    color: #00BFA6; /* padrão para não categorizadas */
 }
 
 .mission-card.tourism .reward-amount {
-    color: #FF9800;
+    color: #F4A261;
 }
 
 .mission-card.fitness .reward-amount {
-    color: #2196F3;
+    color: #219EBC;
 }
 
 .mission-card.health .reward-amount {
-    color: #F44336;
+    color: #E76F51;
 }
 
 .mission-card.pets .reward-amount {
-    color: #9C27B0;
+    color: #9C89B8;
 }
 
 .reward-label {
     font-size: 12px;
-    color: #666;
+    color: #78909C;
 }
 
 .completed-badge {
     position: absolute;
     top: -10px;
     right: -10px;
-    background-color: #9E9E9E;
+    background-color: #B0BEC5;
     color: white;
     font-size: 10px;
     padding: 3px 6px;
     border-radius: 10px;
+    font-weight: bold;
 }
 
 .no-missions {
     text-align: center;
     padding: 30px;
-    color: #666;
-    background-color: #f5f5f5;
+    color: #607D8B;
+    background-color: #E0F7FA;
     border-radius: 8px;
 }

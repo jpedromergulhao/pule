@@ -104,7 +104,7 @@ function DailyMissions({ activeCategory = "all" }) {
         {
             id: 10,
             title: "BaianaSystem",
-            description: "Vá ao show de Baiana ystem: 23h15 no Marco Zero",
+            description: "Vá ao show de BaianaSystem: 23h15 no Marco Zero",
             reward: 8,
             completed: false,
             category: "shows",
@@ -121,6 +121,156 @@ function DailyMissions({ activeCategory = "all" }) {
             longitude: "-8.062921704745952",
             latitude: "-34.87125494918955"
         },
+        {
+            id: 12,
+            title: "Nego El e Coco Arranca Toco",
+            description: "Vá ao show de Nego El e Coco Arranca Toco: 18h00 no Alto José do Pinho",
+            reward: 15,
+            completed: false,
+            category: "shows",
+            longitude: "-8.023078",
+            latitude: "-34.907930"
+        },
+        {
+            id: 13,
+            title: "Luiz Lins",
+            description: "Vá ao show de Luiz Lins: 22h20 no Alto José do Pinho",
+            reward: 25,
+            completed: false,
+            category: "shows",
+            longitude: "-8.023078",
+            latitude: "-34.907930"
+        },
+        {
+            id: 14,
+            title: "Maciel Salu com participação de Juliana Linhares",
+            description: "Vá ao show de Maciel Salu com participação de Juliana Linhares: 22h00 no Arsenal",
+            reward: 10,
+            completed: false,
+            category: "shows",
+            longitude: "-8.061036",
+            latitude: "-34.871297"
+        },
+        {
+            id: 15,
+            title: "Natália Rosa",
+            description: "Vá ao show de Natália Rosa: 20h00 em Brasília Teimosa",
+            reward: 15,
+            completed: false,
+            category: "shows",
+            longitude: "-8.083481",
+            latitude: "-34.880349"
+        },
+        {
+            id: 16,
+            title: "Patusco",
+            description: "Vá ao show de Patusco: 23h40 em Brasília Teimosa",
+            reward: 30,
+            completed: false,
+            category: "shows",
+            longitude: "-8.083481",
+            latitude: "-34.880349"
+        },
+        {
+            id: 17,
+            title: "Silvério Pessoa",
+            description: "Vá ao show de Silvério Pessoa: 21h10 na Bomba do Hemetério",
+            reward: 32,
+            completed: false,
+            category: "shows",
+            longitude: "-8.021532",
+            latitude: "-34.900856"
+        },
+        {
+            id: 18,
+            title: "Milton Raulino & O Chorinho no Mangue",
+            description: "Vá ao show de Milton Raulino & O Chorinho no Mangue: 19h00 em Casa Amarela",
+            reward: 22,
+            completed: false,
+            category: "shows",
+            longitude: "-8.026792",
+            latitude: "-34.917759"
+        },
+        {
+            id: 19,
+            title: "Neris Rodrigues e o Trombonando",
+            description: "Vá ao show de Neris Rodrigues e o Trombonando: 17h30 nas Graças",
+            reward: 15,
+            completed: false,
+            category: "shows",
+            longitude: "-8.047620",
+            latitude: "-34.899900"
+        },
+        {
+            id: 20,
+            title: "Helton Lima",
+            description: "Vá ao show de Helton Lima: 20h00 no Ibura",
+            reward: 30,
+            completed: false,
+            category: "shows",
+            longitude: "-8.110557",
+            latitude: "-34.936993"
+        },
+        {
+            id: 21,
+            title: "Boca Miúda",
+            description: "Vá ao show de Boca Miúda: 19h00 em Jardin São Paulo",
+            reward: 26,
+            completed: false,
+            category: "shows",
+            longitude: "-8.079947",
+            latitude: "-34.942802"
+        },
+        {
+            id: 22,
+            title: "Lenine",
+            description: "Vá ao show de Lenine: 22h20 na Lagoa do Araçá",
+            reward: 27,
+            completed: false,
+            category: "shows",
+            longitude: "-8.094411",
+            latitude: "-34.915025"
+        },
+        {
+            id: 23,
+            title: "Junior Soull",
+            description: "Vá ao show de Junior Soull: 19h00 em Linha do Tiro",
+            reward: 34,
+            completed: false,
+            category: "shows",
+            longitude: "-8.008578",
+            latitude: "-34.904666"
+        },
+        {
+            id: 24,
+            title: "Legião Urbana Recife Cover",
+            description: "Vá ao show de Legião Urbana Recife Cover: 19h00 em Poço da Panela",
+            reward: 24,
+            completed: false,
+            category: "shows",
+            longitude: "-8.035329",
+            latitude: "-34.924474"
+        },
+        {
+            id: 25,
+            title: "Siba e a Fuloresta",
+            description: "Vá ao show de Siba e a Fuloresta: 20h00 na Várzea",
+            reward: 28,
+            completed: false,
+            category: "shows",
+            longitude: "-8.048400",
+            latitude: "-34.959090"
+        },
+        {
+            id: 26,
+            title: "Liv Moraes",
+            description: "Vá ao show de Liv Moraes: 20h00 no Cordeiro",
+            reward: 20,
+            completed: false,
+            category: "shows",
+            longitude: "-8.047936",
+            latitude: "-34.925821"
+        }
     ];
 
     // Filtrar missões com base na categoria selecionada

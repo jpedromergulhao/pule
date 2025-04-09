@@ -5,12 +5,14 @@ import defaultPhoto from "../../assets/avatar1.jpg";
 
 function Header() {
     const user = useSelector((state) => state.user);
+    const image = localStorage.getItem("profilePic") || user.profilePic;
+    const capibas = parseInt(localStorage.getItem('capibas'), 10) || user.capiba;
 
     return (
         <div className="header">
             <div className="profile-content">
                 <img 
-                    src={user.profilePic || defaultPhoto} 
+                    src={image || defaultPhoto} 
                     alt="foto de perfil" 
                 />
                 <div className="info">
@@ -20,7 +22,7 @@ function Header() {
             </div>
             <div className="cash">
                 <h3>Saldo capiba</h3>
-                <span>C${user.capiba}</span> 
+                <span>C${capibas}</span> 
             </div>
         </div>
     );

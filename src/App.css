@@ -1,51 +1,54 @@
 * {
-    padding: 0;
-    margin: 0;
-    font-family: "Inter", sans-serif;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
-    background-color: #D1EEF1;
+  background-color: #D0EBFF; /* Azul claro alegre e suave */
+  color: #2D2D2D; /* Grafite escuro para contraste suave */
+  overflow-x: hidden;
 }
 
+/* Alerta para desktop */
 .desktop-warning {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #111;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    z-index: 9999;
-  }
-  
-  .desktop-warning h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #ffcc00;
-  }
-  
-  .desktop-warning p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-  }
-  
-  .desktop-warning strong {
-    color: #ffcc00;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0057A3; /* Azul bandeira mais vibrante */
+  color: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 9999;
+}
 
-  
+.desktop-warning h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #FFD700; /* Amarelo frevo */
+}
+
+.desktop-warning p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.desktop-warning strong {
+  color: #FFD700;
+}
+

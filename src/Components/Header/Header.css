@@ -1,35 +1,37 @@
 .header {
-    background-color: #F7F7F8;
-    border-bottom: 2px solid #D1EEF1;
+    background-color: #D2E3E5; /* tom claro, mas com contraste */
+    border-bottom: 2px solid #00BFA6; /* verde turquesa vibrante */
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     padding: 10px 20px;
     width: 100%;
-    height: fit-content; 
+    height: fit-content;
     position: sticky;
     top: 0;
-    z-index: 1000; 
-    padding: 10px;
+    z-index: 1000;
 }
 
-.profile-content{
+.profile-content {
     display: flex;
     gap: 15px;
 }
 
-.profile-content img{
+.profile-content img {
     height: 50px;
     width: 50px;
     border-radius: 100%;
+    border: 2px solid #0057A3;
 }
 
-.cash h3{
-    color: #b4b4b4;
+.cash h3 {
+    color: #5A7D85; /* cor neutra, ainda legível */
     font-size: 15px;
+    white-space: nowrap;
 }
 
-.cash span{
+.cash span {
     font-size: 30px;
     font-weight: bold;
+    color: #042940; /* texto escuro para contraste */
 }

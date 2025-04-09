@@ -1,0 +1,110 @@
+.register {
+    width: 100%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    color: #2D2D2D;
+  }
+  
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .name {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .name input {
+    flex: 1;
+  }
+  
+  .texts {
+    padding: 0.75rem 1rem;
+    border: 1px solid #89C2D9; /* Azul suave */
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #ffffff;
+    color: #2D2D2D;
+    transition: border 0.2s ease;
+  }
+  
+  .texts:focus {
+    border-color: #00BFA6;
+    outline: none;
+  }
+  
+  .password-area {
+    height: 30px;
+  }
+  
+  .password-strength {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    color: #5A7D85;
+  }
+  
+  .password-strength p {
+    font-weight: 500;
+  }
+  
+  .password-strength span {
+    margin-left: 5px;
+  }
+  
+  .password-strength-bar {
+    width: 100%;
+    background: #d8e6ec; /* tom claro para leveza */
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 0.3rem;
+    overflow: hidden;
+  }
+  
+  .profile-picture {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 72px;
+  }
+  
+  .imageInput-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: #0057A3;
+    font-weight: 500;
+  }
+  
+  .imageInput-label img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+  
+  .imageInput {
+    display: none;
+  }
+  
+  .profile-preview {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #0057A3;
+  }
+  
+  .login-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2D2D2D;
+  }
+  

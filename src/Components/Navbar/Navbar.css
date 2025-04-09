@@ -1,6 +1,8 @@
 nav {
-    background-color: #F7F7F8;
-    border-bottom: 2px solid #D1EEF1;
+    background-color: #D2E3E5;
+    /* mesmo tom usado no header */
+    border-top: 2px solid #00BFA6;
+    /* verde turquesa vibrante para destaque */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -14,12 +16,17 @@ nav {
 
 .icons {
     height: 30px;
+    filter: brightness(0) saturate(100%) invert(15%) sepia(22%) saturate(2000%) hue-rotate(160deg) brightness(90%) contrast(90%);
+    /* esse filtro aplica uma tonalidade escura azulada nos ícones claros */
+    transition: transform 0.2s ease;
+}
+
+.icons:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 .location {
     border: none;
-}
-
-.location:hover {
-    cursor: pointer;
+    background-color: transparent;
 }

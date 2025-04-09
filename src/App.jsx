@@ -8,6 +8,7 @@ import Missions from "./Pages/Missions/Missions";
 import Rewards from "./Pages/Rewards/Rewards";
 import Profile from "./Pages/Profile/Profile";
 import Challenges from "./Pages/Challenges/Challenges";
+import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 
 // Verifica se o usuário completou o cadastro
 const isUserRegistered = () => {
@@ -60,6 +61,7 @@ function App() {
       <div className="app">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/politica" element={<PrivacyPolicy />} />
           <Route path="/*" element={<MainLayout />} />
         </Routes>
       </div>

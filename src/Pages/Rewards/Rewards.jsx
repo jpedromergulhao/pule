@@ -29,6 +29,10 @@ function Rewards() {
         }
     }, [dispatch, user.availableRewards.length, initialRewards]);
 
+    useEffect(() => {
+        localStorage.setItem('user', JSON.stringify(user));
+    }, [user.capiba, user]);
+
     // Filtrar recompensas por categoria
     const getFilteredRewards = () => {
         if (activeCategory === "all") return user.availableRewards;
@@ -50,17 +54,18 @@ function Rewards() {
     // Função para simular o resgate de uma recompensa
     const handleRedeemReward = () => {
         if (!selectedReward) return;
-    
+
         if (user.capiba >= selectedReward.price) {
             dispatch(redeemReward(selectedReward));
+
             alert(`🎉 Parabéns! Você resgatou "${selectedReward.title}"! O código será enviado para seu e-mail. 📩`);
         } else {
             alert("⚠️ Você não tem Capibas suficientes para resgatar esta recompensa. 💰❌");
         }
-    
+
         handleCloseRedeemModal();
     };
-    
+
 
     return (
         <div className="rewards-container">

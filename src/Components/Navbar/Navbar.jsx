@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { setCurrentPosition } from '../../redux/locationSlice';
+import { AuthContext } from "../../context/AuthContext";
 import './Navbar.css';
 import homeIcon from '../../assets/home.png';
 import pinIcon from '../../assets/pin.png';
@@ -13,6 +14,7 @@ import marketIcon from '../../assets/market.png';
 function Navbar() {
 
     const dispatch = useDispatch();
+    const { setShowRegister } = useContext(AuthContext);
 
     const getUserLocation = () => {
         if ('geolocation' in navigator) {
@@ -20,7 +22,6 @@ function Navbar() {
                 (position) => {
                     const coords = [position.coords.latitude, position.coords.longitude];
                     dispatch(setCurrentPosition(coords));
-                    alert('📍 Localização ativada com sucesso!');
                 },
                 (error) => {
                     console.warn('Erro ao obter localização:', error.message);
@@ -36,9 +37,17 @@ function Navbar() {
         }
     };
 
+    const handleHomeReturn = () => {
+        sessionStorage.clear();
+        setShowRegister(prev => {
+            if (prev) return false;
+            return prev;
+        });
+    }
+
     return (
         <nav>
-            <Link to="/">
+            <Link to="/" onClick={handleHomeReturn}>
                 <img className="icons" src={homeIcon} alt="home" />
             </Link>
             <button className="location" onClick={getUserLocation}>

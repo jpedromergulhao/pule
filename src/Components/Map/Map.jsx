@@ -121,7 +121,16 @@ function Map({ destination, onRouteCalculated }) {
     }, [currentPosition, destination, calculateRoute]);
 
     if (!currentPosition) {
-        return <div>Carregando mapa...</div>;
+        return (
+            <div className="loading-screen">
+                <div className="loader">
+                    <div className="confetti"></div>
+                    <div className="confetti delay1"></div>
+                    <div className="confetti delay2"></div>
+                    <span>Carregando o mapa...</span>
+                </div>
+            </div>
+        );
     }
 
     return (
