@@ -78,5 +78,5 @@ npm run build
 
 ## 📜 License
 
-This project is for educational and prototype purposes only and is not intended for commercial use. All rights reserved.
+This project was created for educational and prototype purposes during Unicap Innovation Saturday and is not intended for commercial use without the consent of the creators. All rights reserved.
 
