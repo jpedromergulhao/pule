@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { setCurrentPosition } from '../../redux/locationSlice';
 import { AuthContext } from "../../context/AuthContext";
 import './Navbar.css';
-import homeIcon from '../../assets/home.png';
+import logoutIcon from '../../assets/logout.png';
 import pinIcon from '../../assets/pin.png';
 import mapIcon from '../../assets/map.png';
 import maskIcon from '../../assets/mask.png';
@@ -48,7 +48,7 @@ function Navbar() {
     return (
         <nav>
             <Link to="/" onClick={handleHomeReturn}>
-                <img className="icons" src={homeIcon} alt="home" />
+                <img className="icons" src={logoutIcon} alt="home" />
             </Link>
             <button className="location" onClick={getUserLocation}>
                 <img className="icons" src={pinIcon} alt="localização" />
