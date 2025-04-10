@@ -74,6 +74,8 @@ npm start
 # Build for production
 npm run build
 
+```
+
 ## 📜 License
 
 This project is for educational and prototype purposes only and is not intended for commercial use. All rights reserved.
