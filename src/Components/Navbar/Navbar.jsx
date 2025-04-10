@@ -47,22 +47,22 @@ function Navbar() {
 
     return (
         <nav>
-            <Link to="/" onClick={handleHomeReturn}>
+            <Link to="/" aria-label="Logout" onClick={handleHomeReturn}>
                 <img className="icons" src={logoutIcon} alt="home" />
             </Link>
-            <button className="location" onClick={getUserLocation}>
+            <button className="location" aria-label="Sua localização" onClick={getUserLocation}>
                 <img className="icons" src={pinIcon} alt="localização" />
             </button>
-            <Link to="/mapa">
+            <Link to="/mapa" aria-label="Ir para mapa">
                 <img className="icons" src={mapIcon} alt="mapa" />
             </Link>
-            <Link to="/missoes">
+            <Link to="/missoes" aria-label="Ir para os desafios">
                 <img className="icons" src={maskIcon} alt="desafios" />
             </Link>
-            <Link to="/loja">
+            <Link to="/loja" aria-label="Ir para a loja">
                 <img className="icons" src={marketIcon} alt="loja" />
             </Link>
-            <Link to="/perfil">
+            <Link to="/perfil" aria-label="Ir para o perfil">
                 <img className="icons" src={userIcon} alt="perfil" />
             </Link>
         </nav>
